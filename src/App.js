@@ -31,7 +31,7 @@ function App() {
   <ThinBackend requireLogin>
     <ChakraProvider>
       <Box className="App" width={"100%"}>
-        {/* <UserStatus /> */}
+        <UserStatus />
         {display.b}
       </Box>
     </ChakraProvider>
