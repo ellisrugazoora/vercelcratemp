@@ -1,18 +1,10 @@
 import { useEffect, useState } from "react";
-import Forward from "./Components/Forward";
 import Output from "./Components/Output";
-import Reverse from "./Components/Reverse";
-import Savedata from "./Components/Savedata";
 import "./Tanga.css"
 import { Box, Center, Wrap } from "@chakra-ui/layout";
-import { Slider, SliderFilledTrack, SliderMark, SliderThumb, SliderTrack } from '@chakra-ui/slider';
-import Graph2 from "./Components/Graph2";
 import Graph3 from "./Components/Graph3";
 import TableComp from "./Components/TableComp";
-import { Button } from "@chakra-ui/button";
-import { Input } from "@chakra-ui/input";
 import TabsComp from "./Components/TabsComp";
-import TestTab from "./Components/TaBle";
 import TaBle from "./Components/TaBle";
 
 
@@ -24,10 +16,7 @@ function Tanga(){
         
     }, [Output])
     const [toggle, SetToggle] = useState("graph")
-    function handletoggle(e){
-        let change_from = {graph: "table", table: "tabs", tabs: "graph"}
-        SetToggle(change_from[toggle])
-    }   
+
     const data = {a: "2", b: "r"};
     return (
         <Box className="Tanga" width={"100%"}>
