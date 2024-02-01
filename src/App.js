@@ -15,10 +15,21 @@ function App() {
     // This url is different for each backend, this one points to 'vercelcratemp'
     host: 'https://vercelcratemp.thinbackend.app'
   });
-  
+  function UserStatus() {
+    // Use the `useCurrentUser()` react hook to access the current logged in user
+    // Returns `null` while the user is being fetched
+    const user = useCurrentUser();
+
+    return <div>
+        {user?.email}
+
+        <button onClick={logout}>Logout</button>
+    </div>
+  }
   return (
   <ThinBackend requireLogin>
     <ChakraProvider>
+      <UserStatus />
       <Box className="App" width={"100%"}>
         {display.b}
       </Box>
