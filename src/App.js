@@ -1,7 +1,7 @@
 import React from 'react';
 //import './App.css';
 import { Box, ChakraBaseProvider, ChakraProvider } from '@chakra-ui/react';
-import { ThinBackend } from 'thin-backend-react';
+import { ThinBackend, useCurrentUser } from 'thin-backend-react';
 import { ensureIsUser, initThinBackend, logout } from 'thin-backend';
 import Tanga from './Components/Tanga/Tanga';
 import StockApp from "./Components/StockApp";
@@ -26,6 +26,7 @@ function App() {
         <button onClick={logout}>Logout</button>
     </div>
   }
+  
   return (
   <ThinBackend requireLogin>
     <ChakraProvider>
