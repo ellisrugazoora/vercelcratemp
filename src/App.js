@@ -7,7 +7,7 @@ import Music from './Components/Music/Music';
 
 import { Box, ChakraBaseProvider, ChakraProvider } from '@chakra-ui/react';
 import { ThinBackend } from 'thin-backend-react';
-import { ensureIsUser, initThinBackend } from 'thin-backend';
+import { ensureIsUser, initThinBackend, logout } from 'thin-backend';
 
 function App() {
   var display = {a: <StockApp />, b: <Tanga />, c: <Music />}
