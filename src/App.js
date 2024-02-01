@@ -29,8 +29,8 @@ function App() {
   return (
   <ThinBackend requireLogin>
     <ChakraProvider>
-      <UserStatus />
       <Box className="App" width={"100%"}>
+        <UserStatus />
         {display.b}
       </Box>
     </ChakraProvider>
